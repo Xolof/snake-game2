@@ -1,6 +1,6 @@
 # Snake game
 
-A little project to practice using Typescript.
+A snake game built with Typescript.
 
 ## Install
 
