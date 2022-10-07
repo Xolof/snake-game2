@@ -12,23 +12,23 @@ class Game {
       this.isOver = isOver;
     }
 
-    public setIsOver(isOver: boolean) {
+    public setIsOver(isOver: boolean): void {
       this.isOver = isOver;
     }
 
-    public getIsOver() {
+    public getIsOver(): boolean {
         return this.isOver;
     }
 
-    public incrementPoints() {
+    public incrementPoints(): void {
         this.points += 1;
     }
 
-    public getPoints() {
+    public getPoints(): number {
         return this.points;
     }
 
-    public reset() {
+    public reset(): void {
         this.isOver = false;
         this.points = 0;
     }
@@ -47,7 +47,7 @@ class Snake {
         this.ctx = canvas.getContext("2d");
     }
 
-    public reset() {
+    public reset(): void {
         this.body = [];
     }
 
@@ -96,14 +96,14 @@ class Snake {
         this.body.push(part);
     };
 
-    public clear () {
+    public clear (): void {
         if (this.ctx) {
             this.ctx.clearRect(0, 0, this.canvas.height, this.canvas.width);
             this.ctx.fillStyle = "green";
         }
     };
 
-    public draw () {
+    public draw (): void {
         this.body.forEach((part): void => {
             if (this.ctx) {
                 this.ctx.fillRect(part.x, part.y, this.size, this.size);
@@ -111,23 +111,23 @@ class Snake {
         });
     };
 
-    public getX () {
+    public getX (): number {
         return this.x;
     };
 
-    public getY () {
+    public getY (): number {
         return this.y;
     };
 
-    public getLength () {
+    public getLength (): number {
         return this.body.length;
     }
 
-    public removeLastPart() {
+    public removeLastPart(): void {
         this.body.shift();
     }
 
-    public getBody () {
+    public getBody (): SnakePart[] {
         return this.body;
     }
 };
