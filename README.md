@@ -6,6 +6,10 @@ A snake game built with Typescript.
 
 `npm install`
 
+## Start dev server
+
+`npm run dev`
+
 ## Build
 
-`npx tsc`
+`npm run build`
